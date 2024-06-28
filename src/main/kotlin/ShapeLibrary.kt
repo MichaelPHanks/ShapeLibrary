@@ -35,6 +35,14 @@ class Point(private var x: Double, private var y: Double)
 // TODO: Functionality for moving only one point?
 class Line(private var point1: Point, private var point2: Point)
 {
+
+    init {
+        require(validateShape(point1, point2))
+    }
+    private fun validateShape(point1: Point, point2: Point): Boolean
+    {
+        return point1.getX() != point2.getX()
+    }
     fun slope() : Double
     {
         TODO("Implement slope from point1 to point2")
