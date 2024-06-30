@@ -1,28 +1,39 @@
 package org.example
 
-// TODO: Functionality for moving only one point?
-class Line(private var point1: Point, private var point2: Point) : Moveable
+import kotlin.math.pow
+import kotlin.math.sqrt
+
+class Line(private var start: Point, private var end: Point) : Moveable
 {
 
     init {
-        require(validateShape(point1, point2))
+        require(start.getX() != end.getX() || start.getY() != end.getY())
     }
-    private fun validateShape(point1: Point, point2: Point): Boolean
+
+    fun getStart(): Point
     {
-        return point1.getX() != point2.getX()
+        return this.start
     }
+
+    fun getEnd(): Point
+    {
+        return this.end
+    }
+
     fun slope() : Double
     {
-        TODO("Implement slope from point1 to point2")
+
+        return (start.getY() - end.getY()) / (start.getX() - end.getX())
     }
 
     fun length(): Double
     {
-        TODO("Implement length from point1 to point2")
+        return sqrt((start.getX() - end.getX()).pow(2.0) + (start.getY() - end.getY()).pow(2.0))
     }
 
     override fun move(deltaX: Double, deltaY: Double) {
-        TODO("Not yet implemented")
+        start.move(deltaX, deltaY)
+        end.move(deltaX, deltaY)
     }
 
 
