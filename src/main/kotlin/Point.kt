@@ -12,6 +12,7 @@ class Point(private var X: Double, private var Y: Double) : Moveable
     {
         return this.Y
     }
+    fun copy() = Point(this.X, this.Y)
 
     override fun move(deltaX: Double, deltaY: Double) {
         X += deltaX

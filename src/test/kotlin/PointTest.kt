@@ -27,7 +27,7 @@ class PointTest
     {
         val point = Point(10.0, 12.2354)
 
-        val point2 = point
+        val point2 = point.copy()
         assertEquals(point.getX(), point2.getX())
         assertEquals(point.getX(), point2.getX())
         point2.move(10.0,0.0)
