@@ -5,26 +5,23 @@ import kotlin.test.assertEquals
 class PointTest
 {
     @Test
-    fun testPointCreation()
+    fun testCreatePoint()
     {
         val point1 = Point(1.0,1.2)
         assertEquals(1.0, point1.getX())
+        assertEquals(1.2, point1.getY())
     }
 
+
+
     @Test
-    fun testPointMoveX()
+    fun testMovePoint()
     {
 
     }
 
     @Test
-    fun testPointMoveY()
-    {
-
-    }
-
-    @Test
-    fun testPointClone()
+    fun testClonePoint()
     {
 
     }
