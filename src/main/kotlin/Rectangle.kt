@@ -8,8 +8,8 @@ class Rectangle(private var topRightPoint: Point, private var bottomLeftPoint: P
         require(topRightPoint.getX() != bottomLeftPoint.getX() && topRightPoint.getY() != bottomLeftPoint.getY())
     }
 
-    fun getTopRightPoint() = this.topRightPoint
-    fun getBottomLeftPoint() = this.bottomLeftPoint
+    fun getTopRightPoint(): Point = this.topRightPoint
+    fun getBottomLeftPoint(): Point = this.bottomLeftPoint
 
 
     override fun move(deltaX: Double, deltaY: Double) {

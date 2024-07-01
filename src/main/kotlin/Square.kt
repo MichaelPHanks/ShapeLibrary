@@ -17,6 +17,8 @@ class Square(private var topRightPoint: Point, private var bottomLeftPoint: Poin
 
     }
 
+    fun getTopRightPoint(): Point = this.topRightPoint
+    fun getBottomLeftPoint(): Point = this.bottomLeftPoint
 
     override fun area(): Double {
         return (abs(topRightPoint.getX() - bottomLeftPoint.getX()).pow(2.0))
