@@ -1,15 +1,20 @@
 package org.example
 
+import kotlin.math.pow
+
 class Circle(private var center: Point, private var radius: Double): Shape(){
 
-
-
-    override fun area(): Double {
-        TODO("Not yet implemented")
+    init {
+        require(radius > 0)
     }
 
+    fun getCenter(): Point = this.center
+    fun getRadius(): Double = this.radius
+
+    override fun area(): Double = Math.PI * radius.pow(2.0)
+
     override fun move(deltaX: Double, deltaY: Double) {
-        TODO("Not yet implemented")
+        this.center.move(deltaX, deltaY)
     }
 }
 

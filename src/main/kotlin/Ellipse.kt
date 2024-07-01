@@ -6,12 +6,14 @@ class Ellipse(private var center: Point, private var radiusX: Double, private va
         require(Math.PI * radiusX * radiusY > 0)
     }
 
+    fun getCenter(): Point = center
+    fun getRadiusX(): Double = radiusX
+    fun getRadiusY(): Double = radiusY
+
     override fun move(deltaX: Double, deltaY: Double) {
-        TODO("Not yet implemented")
+        this.center.move(deltaX, deltaY)
     }
 
-    override fun area(): Double {
-        TODO("Not yet implemented")
-    }
+    override fun area(): Double = Math.PI * radiusX * radiusY
 }
 
